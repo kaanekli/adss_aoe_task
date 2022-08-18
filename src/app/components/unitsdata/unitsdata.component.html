@@ -1,0 +1,41 @@
+<body> 
+<table class="unitdatalist">  
+  <tbody>
+    <tr class="columnname">
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Cost</th>
+    </tr>    
+    <tr class="unitspecs">
+          <th>
+            <div
+               *ngFor="let unit of units$ | async"
+                [textContent]="unit.id" class="unitsid">
+            </div>
+          </th>
+          <th>
+            <div
+               *ngFor="let unit of units$ | async"
+                [textContent]="unit.name" class="unitsname">
+            </div>
+          </th>
+          <th>
+            <div
+               *ngFor="let unit of units$ | async"
+                [textContent]="unit.age" class="unitsage">
+            </div>
+          </th>
+          <th>
+            <div
+               *ngFor="let unit of units$ | async"
+                [textContent]="unit.cost" class="unitscost">
+            </div>
+          </th>
+    </tr>
+  </tbody>
+</table>
+</body>
+
+
+
